@@ -4684,7 +4684,7 @@ bool clip_encode(struct clip_ctx * ctx, struct clip_encode_params * params) {
                 std::vector<int32_t> positions(pos_h * pos_w);
                 // note: sized by the actual patch counts; a tall/wide image produces more
                 // than 1024 patches per side and a fixed [1024] array would be overrun
-                std::vector<int> bucket_coords_h(pos_h);
+                std::vector<int> bucket_coords_h(pos_h);  
                 std::vector<int> bucket_coords_w(pos_w);
                 for (int i = 0; i < pos_h; i++){
                     bucket_coords_h[i] = std::floor(70.0*i/pos_h);
